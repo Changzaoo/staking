@@ -1,24 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Página HTML com React/Next.js</title>
-    <!-- Inclua os estilos (styles.css) se necessário -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Página HTML com JavaScript</title>
 </head>
 <body>
 
-    <div id="root"></div>
+  <div id="app"></div>
 
-    <!-- Inclua a biblioteca React e o script gerado pelo TypeScript (bundle.js) -->
-    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/next@12/umd/next.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom/server@17/umd/react-dom-server.production.min.js"></script>
+  <script type="module">
+    import { NextPage } from "next";
+    import Image from "next/image";
+    import { useRouter } from "next/router";
+    import styles from "../styles/Home.module.css";
 
-    <!-- Seu script TypeScript/React compilado (bundle.js) -->
-    <script src="pages/index.tsx"></script>
+    const Home = () => {
+      const router = useRouter();
+
+      return (
+        <div className={styles.container}>
+          {/* Top Section */}
+          <h1 className={styles.h1}>Bem vindo ao test de staking 2078 | vinicius</h1>
+          <div className={styles.nftBoxGrid}>
+            <div
+              className={styles.optionSelectBox}
+              role="button"
+              onClick={() => router.push("/mint")}
+            >
+              {/* Mint a new NFT */}
+              <Image src="/icons/drop.webp" alt="drop" width={64} height={64} />
+              <h2 className={styles.selectBoxTitle}>Mint uma nova NFT</h2>
+              <p className={styles.selectBoxDescription}>
+                Use o contrato para mintar um NFT da coleção.
+              </p>
+            </div>
+
+            <div
+              className={styles.optionSelectBox}
+              role="button"
+              onClick={() => router.push("/stake")}
+            >
+              {/* Staking an NFT */}
+              <Image src="/icons/token.webp" alt="token" width={64} height={64} />
+              <h2 className={styles.selectBoxTitle}>Stake NFTs</h2>
+              <p className={styles.selectBoxDescription}>
+                Use o contrato de staking.
+              </p>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    export default Home;
+
+    // Monta o componente na div com id "app"
+    const app = document.getElementById("app");
+    ReactDOM.render(<Home />, app);
+  </script>
 
 </body>
 </html>
