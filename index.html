@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página HTML com JavaScript Externo</title>
-    <!-- Vincule seu arquivo JavaScript externo -->
-    <script src="seu-arquivo-js.js" defer></script>
+    <title>Sua Página HTML com React/Next.js</title>
+    <!-- Inclua os estilos (styles.css) se necessário -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Minha Página HTML com JavaScript Externo</h1>
+    <div id="root"></div>
+
+    <!-- Inclua a biblioteca React e o script gerado pelo TypeScript (bundle.js) -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/next@12/umd/next.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom/server@17/umd/react-dom-server.production.min.js"></script>
+
+    <!-- Seu script TypeScript/React compilado (bundle.js) -->
+    <script src="seu-arquivo-js-compilado.js"></script>
 
 </body>
 </html>
