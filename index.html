@@ -1,64 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Página HTML com JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Staking 2078 | Vinicius</title>
+    <!-- Importe os estilos do Next.js (substitua pelo caminho correto) -->
+    <link rel="stylesheet" href="/_next/static/css/styles.chunk.css" />
+    <!-- Importe os estilos locais (substitua pelo caminho correto) -->
+    <link rel="stylesheet" href="/styles/Home.module.css" />
 </head>
 <body>
+    <div id="root"></div>
 
-  <div id="app"></div>
-
-  <script type="module">
-    import { NextPage } from "next";
-    import Image from "next/image";
-    import { useRouter } from "next/router";
-    import styles from "../styles/Home.module.css";
-
-    const Home = () => {
-      const router = useRouter();
-
-      return (
-        <div className={styles.container}>
-          {/* Top Section */}
-          <h1 className={styles.h1}>Bem vindo ao test de staking 2078 | vinicius</h1>
-          <div className={styles.nftBoxGrid}>
-            <div
-              className={styles.optionSelectBox}
-              role="button"
-              onClick={() => router.push("/mint")}
-            >
-              {/* Mint a new NFT */}
-              <Image src="/icons/drop.webp" alt="drop" width={64} height={64} />
-              <h2 className={styles.selectBoxTitle}>Mint uma nova NFT</h2>
-              <p className={styles.selectBoxDescription}>
-                Use o contrato para mintar um NFT da coleção.
-              </p>
-            </div>
-
-            <div
-              className={styles.optionSelectBox}
-              role="button"
-              onClick={() => router.push("/stake")}
-            >
-              {/* Staking an NFT */}
-              <Image src="/icons/token.webp" alt="token" width={64} height={64} />
-              <h2 className={styles.selectBoxTitle}>Stake NFTs</h2>
-              <p className={styles.selectBoxDescription}>
-                Use o contrato de staking.
-              </p>
-            </div>
-          </div>
-        </div>
-      );
-    };
-
-    export default Home;
-
-    // Monta o componente na div com id "app"
-    const app = document.getElementById("app");
-    ReactDOM.render(<Home />, app);
-  </script>
-
+    <!-- Importe as dependências do Next.js (substitua pelo caminho correto) -->
+    <script src="/_next/static/chunks/polyfills.js"></script>
+    <script src="/_next/static/chunks/main.js"></script>
+    <script src="/_next/static/chunks/webpack.js"></script>
+    <script src="/_next/static/chunks/framework.js"></script>
+    <script src="/_next/static/chunks/pages/_app.js"></script>
+    <script src="/_next/static/chunks/pages/index.js"></script>
 </body>
 </html>
