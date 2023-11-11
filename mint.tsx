@@ -1,13 +1,5 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFT Minting Page</title>
-</head>
-<body>
-    <script>
 import { Web3Button } from "@thirdweb-dev/react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { nftDropContractAddress } from "../consts/contractAddresses";
 import styles from "../styles/Home.module.css";
@@ -44,6 +36,3 @@ const Mint: NextPage = () => {
 };
 
 export default Mint;
-    </script>
-</body>
-</html>
