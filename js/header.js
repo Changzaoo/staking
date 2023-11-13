@@ -46,7 +46,7 @@ let isMetamaskConnected;
 
 let selectedAccount;
 
-let web3Main = new Web3('https://rpc.ankr.com/mumbai');
+let web3Main = new Web3('https://rpc.ankr.com/polygon_mumbai');
 
 // Create an instance of Notyf
 var notyf = new Notyf({
